@@ -1,5 +1,5 @@
-# BitFit [(Paper)](https://arxiv.org/abs/2106.10199)
-Simple Parameter-efficient Fine-tuning for Transformer-based Masked Language-models
+# BitFit-DP [(Paper)]
+Differentially Private Simple Parameter-efficient Fine-tuning for Transformer-based Masked Language-models
 
 # Abstract
 We introduce BitFit, a sparse-finetuning method where only the bias-terms of the model (or a subset of them) are being modified. We show that with small-to-medium training data, applying BitFit on pre-trained BERT models is competitive with (and sometimes better than) fine-tuning the entire model. For larger data, the method is competitive with other sparse fine-tuning methods.
@@ -31,7 +31,9 @@ python run_glue.py
        --optimizer <optimizer_name>\
        --save-evaluator\
        --predict-test\
-       --verbose
+       --verbose\
+       --noise-multiplier\
+       --max-grad-norm
 ```
 For further information about the arguments run:
 ```
